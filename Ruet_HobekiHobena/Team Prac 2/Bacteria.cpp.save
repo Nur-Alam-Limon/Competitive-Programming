@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll n;
+    cin>>n;
+    n=pow(2,n);
+    string s="0010011111100100";
+    if(n==2) {cout<<"01"<<endl; return 0;}
+    if(n)
+    return 0;
+}
+

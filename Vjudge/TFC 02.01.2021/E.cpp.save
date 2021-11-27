@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+ll a[10000007];
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll x,y,k,g=0,x=0;
+        cin>>x>>y>>k;
+        memset(a,0,sizeof(a));
+        g=__gcd(x,y);
+        for(ll i=1;i*i<=g;i++)
+        {
+            if(g%i==0)
+            {
+                a[x++]=i;
+                if(i*i!=g) a[x++]=g/i;
+            }
+        }
+        sort(a,a+x);
+        if(!flag) cout<<-1<<endl;
+    }
+    return 0;
+}
+

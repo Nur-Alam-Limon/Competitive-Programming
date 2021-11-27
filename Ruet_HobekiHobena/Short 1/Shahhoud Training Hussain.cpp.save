@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll x,y,z,tmp=0,l1=0,l2=0;
+        ll a[105],b[105],ans[500]={0};
+        string s1=0,s2=0;
+        cin>>x>>y>>z;
+        s1=(x-y);
+        s2=z;
+        l1=s1.size();
+        l2=s2.size();
+        s=((x-'0')-(y-'0'))*(z-'0');
+        cout<<s<<endl;
+    }
+    return 0;
+}
+
+

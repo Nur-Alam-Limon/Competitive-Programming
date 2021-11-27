@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll a,b,ans=0,c=0,d=0,e=0,f=0;
+        cin>>a>>b;
+        for(ll i=31;i>=0;i--)
+        {
+            c=1<<i;
+            d=a&c;
+            e=b&c;
+            if(d==1 && e==1) {ans=(a^c)+(b^c);  f=1; break;}
+        }
+        if(!f) ans=a+b;
+        cout<<ans<<endl;
+    }
+    return 0;
+}
+

@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,col=0;
+        cin>>n;
+        col=n*3;
+        char a[3][col];
+        for(ll i=0;i<3;i++)
+        {
+            for(ll i=0;i<col;i++)
+            {
+                cin>>a[i][j];
+            }
+        }
+        for(ll i=0;i<col-2;i++)
+        {
+            for(ll j=0;j<3;j++)
+            {
+                if(s[j][i]=='*') cnt++;
+            }
+        }
+    }
+    return 0;
+}
+

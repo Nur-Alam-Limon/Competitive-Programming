@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    long long int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,x=0,y=0;
+        cin>>n;
+        char s[n+5];
+        cin>>s;
+        for(int i=0;i<n-6;i++)
+        {
+            if((s[i]=='a' || s[i]=='?') && (s[i+1]=='b' || s[i+1]=='?') && (s[i+2]=='a' || s[i+2]=='?') && (s[i+3]=='c' || s[i+3]=='?') && (s[i+4]='a' || s[i+4]=='?') && (s[i+5]=='b'|| s[i+5]=='?') && (s[i+6]='a' || s[i+6]=='?'))
+            {
+                x++;
+                y=i;
+                if(s[i]=='?') {s[i]='a';}
+                else if(s[i+1]=='?') {s[i+1]='b';}
+                else if(s[i+2]=='?') {s[i+2]='a';}
+                else if(s[i+3]=='?') {s[i+3]='c';}
+                else if(s[i+4]=='?') {s[i+4]='a';}
+                else if(s[i+5]=='?') {s[i+5]='b';}
+                else if(s[i+6]=='?') {s[i+6]='a';}
+            }
+        }
+        if(x!=1) cout<<"NO"<<endl;
+        else
+        {
+            for(int j=0;j<y;j++)
+            {
+                    if(s[j]=='?') {s[j]='d';}
+                    cout<<s[j];
+            }
+            cout<<"abacaba";
+            for(int k=y+7;k<n;k++)
+                {
+                    if(s[k]=='?') {s[k]='d';}
+                    cout<<s[j]<<endl;
+                }
+        }
+    }
+    return 0;
+}

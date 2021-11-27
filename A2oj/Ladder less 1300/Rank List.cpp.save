@@ -1,0 +1,48 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+bool sortbydesc(const pair<ll,ll> &a,const pair<ll,ll> &b)
+{
+       return a.second>b.second;
+}
+
+int main()
+{
+    ll n,k,x,y,cnt=0,z=0,ans=0;
+    cin>>n>>k;
+    pair<ll,ll>a[55];
+    vector<ll>b;
+    for(ll i=0;i<n;i++)
+    {
+        cin>>x>>y;
+        a[i]=make_pair(x,y);
+    }
+    sort(a,a+n,sortbydesc);
+    x=a[k-1].first;
+    for(ll i=0;i<n;i++)
+    {
+        if(a[i].first==x){
+        while(a[i].first==x)
+        {
+            b.push_back(a[i].second);
+            z=1;
+        }}
+        cnt++;
+        if(z) break;
+    }
+    sort(b.begin(),b.end(),greater<int>());
+    for(ll i=0;i<b.size();i++)
+    {
+        cnt++;
+        if(cnt==k) y=b[i];
+    }
+    for(ll i=0;i<b.size();i++)
+    {
+        if(b[i]==y) ans++;
+    }
+    cout<<ans<<endl;
+    return 0;
+}

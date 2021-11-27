@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll n,ans=0,y=0,z=0;
+    double x=0;
+    cin>>n;
+    x=sqrt(n);
+    ans=sqrt(n);
+    if(x>=(ans+0.55)) ans+=1;
+    cout<<ans<<endl;
+    return 0;
+}

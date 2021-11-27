@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll x,sum=0,y=0,ans=0;
+        cin>>x;
+        for(ll i=1;i<x;i++)
+        {
+            cin>>y;
+            sum+=y;
+            if((y-sum)!=1) ans=y-1;
+        }
+        cout<<ans<<endl;
+    }
+    return 0;
+}
+
+
+

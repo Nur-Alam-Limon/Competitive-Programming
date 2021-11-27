@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+typedef long long ll;
+
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,s=1000000;
+        cin>>n;
+        ll a[n+5],m[n+5];
+        memset(m,0,sizeof(m));
+        for(ll i=0;i<n;i++)
+        {
+            cin>>a[i];
+            m[a[i]]++;
+        }
+    }
+}
